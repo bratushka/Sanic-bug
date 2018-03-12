@@ -6,7 +6,7 @@ app = Sanic()
 connection = None
 
 
-async def get_connection() -> aiopg.connect:
+async def get_connection():
     """Get existing connection if not closed or create one"""
     global connection
 
