@@ -1,0 +1,16 @@
+aiofiles==0.3.2
+aiohttp==3.0.7
+aiopg==0.13.2
+async-timeout==2.0.0
+attrs==17.4.0
+chardet==3.0.4
+httptools==0.0.10
+idna==2.6
+idna-ssl==1.0.1
+multidict==4.1.0
+psycopg2==2.7.4
+sanic==0.7.0
+ujson==1.35
+uvloop==0.9.1
+websockets==4.0.1
+yarl==1.1.1

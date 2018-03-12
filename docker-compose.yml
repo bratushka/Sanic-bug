@@ -1,0 +1,28 @@
+---
+version: "3"
+
+services:
+  sanic-bug:
+    build: .
+    container_name: sanic-bug
+    depends_on:
+      - sanic-bug-db
+    networks:
+      - sanic-bug
+    ports:
+      - 7771:7771
+    tty: true
+    volumes:
+      - .:/code/
+
+  sanic-bug-db:
+    container_name: sanic-bug-db
+    environment:
+      - POSTGRES_PASSWORD=some-serious-password
+      - POSTGRES_USER=user
+    image: postgres:10-alpine
+    networks:
+      - sanic-bug
+
+networks:
+  sanic-bug:
